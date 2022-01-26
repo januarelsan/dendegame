@@ -17,6 +17,7 @@ public class SceneController : Singleton<SceneController> {
 	}
 
 	public void QuitGame(){		
+		Debug.Log("Quit Game");
 		Application.Quit ();
 	}
 	

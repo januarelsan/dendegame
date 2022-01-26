@@ -11,6 +11,10 @@ public class ProfileController : MonoBehaviour
     [SerializeField] private Toggle girlToggle;
     [SerializeField] private GameObject profilePanel;
 
+    void Start(){
+        // PlayerPrefs.DeleteAll();
+    }
+
     public void SaveProfile()
     {
         PlayerPrefs.SetString("ProfileName", nameInputField.text);
