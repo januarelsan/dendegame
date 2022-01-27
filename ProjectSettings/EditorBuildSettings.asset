@@ -6,15 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Main/Scenes/New Scene.unity
-    guid: 6dffe7bcdf2958e46926cfeef7848165
-  - enabled: 0
     path: Assets/_Main/Scenes/Home.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Main/Scenes/MissionBrush.unity
     guid: 8657752280ae8f4429d44a8991e973c7
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Main/Scenes/MissionSelect.unity
     guid: c3183ed8e44237d4b815b6770c25bd91
   m_configObjects: {}
