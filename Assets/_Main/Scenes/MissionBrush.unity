@@ -1156,7 +1156,7 @@ GameObject:
   - component: {fileID: 242488395}
   - component: {fileID: 242488394}
   m_Layer: 5
-  m_Name: Button
+  m_Name: InfoItemButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1225,7 +1225,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 242488395}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1648717391}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b975c6eee3ef95742b7ea73c22983dae, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &242488395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1277,7 +1289,7 @@ GameObject:
   - component: {fileID: 313147047}
   - component: {fileID: 313147046}
   m_Layer: 5
-  m_Name: Button
+  m_Name: InfoItemButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1346,7 +1358,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 313147047}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1648717391}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b975c6eee3ef95742b7ea73c22983dae, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &313147047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1518,7 +1542,7 @@ GameObject:
   - component: {fileID: 327227732}
   - component: {fileID: 327227731}
   m_Layer: 5
-  m_Name: Button
+  m_Name: InfoItemButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1587,7 +1611,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 327227732}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1648717391}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b975c6eee3ef95742b7ea73c22983dae, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &327227732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2396,7 +2432,7 @@ GameObject:
   - component: {fileID: 399150957}
   - component: {fileID: 399150956}
   m_Layer: 5
-  m_Name: Button
+  m_Name: InfoItemButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2465,7 +2501,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 399150957}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1648717391}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b975c6eee3ef95742b7ea73c22983dae, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &399150957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3367,7 +3415,7 @@ GameObject:
   - component: {fileID: 606670896}
   - component: {fileID: 606670895}
   m_Layer: 5
-  m_Name: Button
+  m_Name: InfoItemButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3436,7 +3484,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 606670896}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1648717391}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b975c6eee3ef95742b7ea73c22983dae, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &606670896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3728,7 +3788,7 @@ GameObject:
   - component: {fileID: 641642557}
   - component: {fileID: 641642556}
   m_Layer: 5
-  m_Name: Button
+  m_Name: InfoItemButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3797,7 +3857,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 641642557}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1648717391}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b975c6eee3ef95742b7ea73c22983dae, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &641642557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3849,7 +3921,7 @@ GameObject:
   - component: {fileID: 646705758}
   - component: {fileID: 646705757}
   m_Layer: 5
-  m_Name: Button
+  m_Name: InfoItemButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3918,7 +3990,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 646705758}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1648717391}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b975c6eee3ef95742b7ea73c22983dae, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &646705758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4242,6 +4326,18 @@ MonoBehaviour:
           m_StringArgument: MissionSelect
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1648717391}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b975c6eee3ef95742b7ea73c22983dae, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &674245685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4369,6 +4465,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1648717391}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b975c6eee3ef95742b7ea73c22983dae, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -10498,6 +10606,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21911c326185a654899fbf9eccf30008, type: 3}
+--- !u!82 &1648717391 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 822708572, guid: 21911c326185a654899fbf9eccf30008, type: 3}
+  m_PrefabInstance: {fileID: 1648717390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1661120789
 GameObject:
   m_ObjectHideFlags: 0
@@ -11469,6 +11582,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1648717391}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b975c6eee3ef95742b7ea73c22983dae, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

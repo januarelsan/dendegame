@@ -12,9 +12,14 @@ public class SceneController : Singleton<SceneController> {
 	}
 
 	public void GoToScene(string sceneName){		
-		SceneManager.LoadScene (sceneName);
+		StartCoroutine(ProceedToScene(sceneName));
 
 	}
+
+	IEnumerator ProceedToScene(string sceneName){
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene (sceneName);
+    }
 
 	public void QuitGame(){		
 		Debug.Log("Quit Game");

@@ -62,4 +62,6 @@ public class ProfileController : MonoBehaviour
             SceneController.Instance.GoToScene("MissionSelect");
         }
     }
+
+    
 }

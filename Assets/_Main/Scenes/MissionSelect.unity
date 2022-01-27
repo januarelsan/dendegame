@@ -585,6 +585,18 @@ MonoBehaviour:
           m_StringArgument: Home
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1902752996}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b975c6eee3ef95742b7ea73c22983dae, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &674245685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,7 +718,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 715974099}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1902752996}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b975c6eee3ef95742b7ea73c22983dae, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &715974099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1510,6 +1534,18 @@ MonoBehaviour:
           m_StringArgument: MissionBrush
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1902752996}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b975c6eee3ef95742b7ea73c22983dae, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1635731813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1807,3 +1843,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21911c326185a654899fbf9eccf30008, type: 3}
+--- !u!82 &1902752996 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 822708572, guid: 21911c326185a654899fbf9eccf30008, type: 3}
+  m_PrefabInstance: {fileID: 1902752994}
+  m_PrefabAsset: {fileID: 0}
