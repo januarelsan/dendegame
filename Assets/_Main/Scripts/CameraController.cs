@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CameraController : MonoBehaviour
+public class CameraController : Singleton<CameraController>
 {
-    [SerializeField]
-    private Image[] images;
-
-    private int capturedImageIndex;
-    public void TakePicture()
+    
+    public void TakePicture(PicButton picButton)
     {
         int maxSize = 512;
 
@@ -26,14 +23,18 @@ public class CameraController : MonoBehaviour
                    return;
                }
 
+
             Sprite sprite = Sprite.Create(texture, new Rect(0.0f, 0.0f, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100.0f);            
 
-            images[capturedImageIndex].sprite = sprite;
+            ImagePreviewController.Instance.ShowNewImagePreview(picButton,sprite);
+
+            
+            // image.SetNativeSize();
             // capturedImageIndex++;
 
             // If a procedural texture is not destroyed manually, 
             // it will only be freed after a scene change
-            Destroy(texture, 5f);
+            // Destroy(texture, 5f);
            }
        }, maxSize);
 
