@@ -14,6 +14,7 @@ public class DendeGameController : Singleton<DendeGameController>
 
     private int currentBoxNumber = 1; // start from 1
     private int ballLandedBoxNumber = 0;
+    private int direction = 1;
 
     public enum GameState
     {
@@ -28,14 +29,9 @@ public class DendeGameController : Singleton<DendeGameController>
 
     public void ThrowBall()
     {
-        // Debug.Log(directionController.GetSliderValue());
-        // Debug.Log(powerController.GetSliderValue());
 
         int dirBoxIndex = (int)Math.Round(directionController.GetSliderValue());
         int powerBoxIndex = (int)Math.Round(powerController.GetSliderValue());
-
-        // Debug.Log(dirBoxIndex);
-        // Debug.Log(powerBoxIndex);
 
         Vector2 moveToValue = new Vector2(boxController.GetDirectionBox(dirBoxIndex).position.x, boxController.GetPowerBox(powerBoxIndex).position.y);
         
@@ -73,39 +69,58 @@ public class DendeGameController : Singleton<DendeGameController>
 
     IEnumerator MoveCharacterIE(int diceNumber){
 
-        Debug.Log("Dice Number: " + diceNumber);
 
-        bool isEnd = false;
+        bool isEnd = false;        
 
         int skippedBox = 0;
         for (int i = 0; i < diceNumber; i++)
         {
             int jumpFrom = characterController.GetCurrentBoxNumber();
-            int jumpTo = jumpFrom;
-            Debug.Log("To Jump: " + jumpTo);
-            if(jumpTo + 1 == currentBoxNumber){
-                // Debug.Log("Skip : " + boxController.GetNumberBox(i).GetComponent<Box>().GetNumber());
-                skippedBox++;
-                jumpTo += skippedBox;
+            Debug.Log("Jump From: " + jumpFrom);
+            
+            int jumpTo = jumpFrom + direction;            
 
-                // Debug.Log("Jump After Skip : " + boxController.GetNumberBox(toJump).GetComponent<Box>().GetNumber());
+            if(jumpTo == currentBoxNumber - 1){
+                
+                Debug.Log("AAA");
+                skippedBox = direction;
+                jumpTo += skippedBox;
+                
+                Debug.Log("Jump To: " + jumpTo);
+                
                 if(!CheckIsEndOfTop(jumpTo)){
-                    characterController.MoveToBox(boxController.GetNumberBox(jumpTo).position,1);
-                    skippedBox--;
+                    if(jumpTo >= 0){
+                        characterController.MoveToBox(boxController.GetNumberBox(jumpTo).position,jumpTo);
+                    } else {
+                        characterController.MoveToDefaultPos();
+                        ChangeDirection(1);
+                        break;
+                    }
+                    skippedBox = 0;
                 } else {
-                    characterController.MoveToBox(boxController.GetAllBoxes()[11].position);
-                    isEnd = true;
+                    characterController.MoveToBox(boxController.GetAllBoxes()[11].position, jumpTo);
+                    skippedBox = 0;
+                    ChangeDirection(-1);
+                    break;
                 }
 
             } else {
-                jumpTo += skippedBox;
-
+                Debug.Log("BBB");
+                Debug.Log("To Jump: " + jumpTo);                                
                 if(!CheckIsEndOfTop(jumpTo)){
-                    // Debug.Log("Jump : " + boxController.GetNumberBox(toJump).GetComponent<Box>().GetNumber());
-                    characterController.MoveToBox(boxController.GetNumberBox(jumpTo).position);
+                    
+                    if(jumpTo >= 0){
+                        characterController.MoveToBox(boxController.GetNumberBox(jumpTo).position,jumpTo);
+                    } else {
+                        characterController.MoveToDefaultPos();
+                        ChangeDirection(1);
+                        break;
+                    }
                 } else {
-                    characterController.MoveToBox(boxController.GetAllBoxes()[11].position);
-                    isEnd = true;
+                    Debug.Log("End");
+                    characterController.MoveToBox(boxController.GetAllBoxes()[11].position,jumpTo);
+                    ChangeDirection(-1);
+                    break;
                 }
             }
 
@@ -128,5 +143,9 @@ public class DendeGameController : Singleton<DendeGameController>
         } else {
             return false;
         }
+    }
+
+    void ChangeDirection(int direction){
+        this.direction = direction;
     }
 }
