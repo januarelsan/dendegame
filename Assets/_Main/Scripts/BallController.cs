@@ -8,7 +8,7 @@ public class BallController : MonoBehaviour
     [SerializeField] private GameObject spriteRendererObj;
     private Vector3 defaultPosition;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         defaultPosition = transform.position;
     }

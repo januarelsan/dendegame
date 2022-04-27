@@ -40,4 +40,15 @@ public class BoxController : MonoBehaviour
 
         return null;
     }
+
+    public void ActiveSignBox(int boxIndex){
+        for (int i = 0; i < allNumberBoxes.Length; i++)
+        {
+            if(i == boxIndex){
+                allNumberBoxes[i].GetChild(1).gameObject.SetActive(true);
+            } else {
+                allNumberBoxes[i].GetChild(1).gameObject.SetActive(false);
+            }
+        }
+    }
 }

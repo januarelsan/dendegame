@@ -25,6 +25,10 @@ public class DendeGameController : Singleton<DendeGameController>
 
     private GameState gameState = GameState.Throw;
 
+    void Start(){
+        QuestionController.Instance.ActivePanel();
+        StartThrow();
+    }
 
 
     public void ThrowBall()
@@ -47,7 +51,7 @@ public class DendeGameController : Singleton<DendeGameController>
     {
         if (currentBoxNumber == ballLandedBoxNumber)
         {
-            Debug.Log("Correct Box");
+            // Debug.Log("Correct Box");
             gameState = GameState.Toss;
             powerController.ActivePowerHolder(false);
             directionController.ActiveDirectionHolder(false);
@@ -55,7 +59,7 @@ public class DendeGameController : Singleton<DendeGameController>
         }
         else
         {
-            Debug.Log("Wrong Box");
+            // Debug.Log("Wrong Box");
             powerController.ActivePowerHolder(false);
             directionController.ActiveDirectionHolder(true);
             ballController.ResetPosition();
@@ -70,23 +74,23 @@ public class DendeGameController : Singleton<DendeGameController>
     IEnumerator MoveCharacterIE(int diceNumber){
 
 
-        bool isEnd = false;        
+        bool isOnEdge = false;        
 
         int skippedBox = 0;
         for (int i = 0; i < diceNumber; i++)
         {
             int jumpFrom = characterController.GetCurrentBoxNumber();
-            Debug.Log("Jump From: " + jumpFrom);
+            // Debug.Log("Jump From: " + jumpFrom);
             
             int jumpTo = jumpFrom + direction;            
 
             if(jumpTo == currentBoxNumber - 1){
                 
-                Debug.Log("AAA");
+                // Debug.Log("Need Skip");
                 skippedBox = direction;
                 jumpTo += skippedBox;
                 
-                Debug.Log("Jump To: " + jumpTo);
+                // Debug.Log("Jump To: " + jumpTo);
                 
                 if(!CheckIsEndOfTop(jumpTo)){
                     if(jumpTo >= 0){
@@ -105,8 +109,8 @@ public class DendeGameController : Singleton<DendeGameController>
                 }
 
             } else {
-                Debug.Log("BBB");
-                Debug.Log("To Jump: " + jumpTo);                                
+                // Debug.Log("Just Jump");
+                // Debug.Log("To Jump: " + jumpTo);                                
                 if(!CheckIsEndOfTop(jumpTo)){
                     
                     if(jumpTo >= 0){
@@ -117,7 +121,7 @@ public class DendeGameController : Singleton<DendeGameController>
                         break;
                     }
                 } else {
-                    Debug.Log("End");
+                    // Debug.Log("On Edge");
                     characterController.MoveToBox(boxController.GetAllBoxes()[11].position,jumpTo);
                     ChangeDirection(-1);
                     break;
@@ -125,13 +129,20 @@ public class DendeGameController : Singleton<DendeGameController>
             }
 
             yield return new WaitForSeconds(1.5f);
+            // yield return new WaitForSeconds(0f);
         }
 
-        if (!isEnd)
+        if (!isOnEdge)
         {                
             gameState = GameState.Toss;
             diceController.ResetDice();
             diceController.ActiveButton(true);
+        }
+
+        if (characterController.GetCurrentBoxNumber() == -1)
+        {
+            UpdateCurrentBoxNumber();
+            StartThrow();
         }
 
 
@@ -147,5 +158,19 @@ public class DendeGameController : Singleton<DendeGameController>
 
     void ChangeDirection(int direction){
         this.direction = direction;
+        QuestionController.Instance.ActivePanel();
+    }
+
+    public void StartThrow(){
+        directionController.ActiveDirectionHolder(true);
+        diceController.ActiveButton(false);
+        boxController.ActiveSignBox(currentBoxNumber - 1);
+    }
+
+    public void UpdateCurrentBoxNumber(){        
+        currentBoxNumber ++;
+        if(currentBoxNumber == 10){
+            Debug.Log("Game is Finished!!!!");
+        }
     }
 }

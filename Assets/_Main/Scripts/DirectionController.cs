@@ -7,15 +7,16 @@ public class DirectionController : MonoBehaviour
 {
     [SerializeField] private GameObject directionholder;
     [SerializeField] private Slider directionSlider;
-
     [SerializeField] private Button button;
+
+    [SerializeField] private BallController ballController;
 
     private int sliderDir = 1;
 
     private bool sliderCanRunning = false;
 
     void Start(){
-        ActiveDirectionHolder(true);
+        // ActiveDirectionHolder(true);
     }
 
     public void ActiveDirectionHolder(bool value){
@@ -23,6 +24,9 @@ public class DirectionController : MonoBehaviour
         sliderCanRunning = true;
         directionSlider.value = directionSlider.maxValue / 2;
         button.interactable = true;
+        
+        if(value)
+            ballController.ResetPosition();
     }
 
     void Update() {

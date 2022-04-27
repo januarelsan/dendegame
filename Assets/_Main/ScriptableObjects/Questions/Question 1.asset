@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c5df3a2673eae48a4392f3ea3dd4c8, type: 3}
+  m_Name: Question 1
+  m_EditorClassIdentifier: 
+  question: Syarat sikat gigi yang baik
+  options:
+  - Bulu sikat tidak terlalu keras dan tidak terlalu lembut (medium)
+  - Bulu sikat keras
+  - Bulu sikat sangat lembut
+  correctOptionIndex: 0
